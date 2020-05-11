@@ -1,0 +1,110 @@
+@import '../../materials//style//stylesheet.scss';
+
+:root {
+  --card-width: 380px;
+  --card-height: 480px;
+  --hero-bg-height: 60vh;
+}
+
+.home-page {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.hero {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  will-change: transform;
+  .bg-pic {
+    background: url('https://cdm0lfbn.cloudimg.io/v7/_origin_/image_uploader/photos/14/original/great-pre-season-snow-conditions-in-curchevel-courchevel-valley.jpg?p=large')
+      no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    flex-grow: 1;
+    height: var(--hero-bg-height);
+    opacity: 0.85;
+  }
+  .social {
+    flex-shrink: 1;
+    height: var(--hero-bg-height);
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+.social-icon {
+  width: 18px;
+  height: 18px;
+  padding: 1.525em 0.825em;
+  padding-bottom: 0;
+}
+.featured {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  .content-card {
+    max-width: 45vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: var(--card-height);
+    width: var(--card-width);
+    margin-right: 2.5vw;
+    .title {
+      transform-origin: center left;
+      will-change: transform;
+    }
+  }
+  .featured-card {
+    max-width: 45vw;
+    height: var(--card-height);
+    width: var(--card-width);
+    position: relative;
+    overflow: visible;
+    margin-left: 2.5vw;
+    user-select: none;
+    will-change: transform;
+    .image-mask {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      border-radius: var(--card-border-radius);
+      will-change: transform;
+    }
+  }
+}
+
+.content {
+  margin-bottom: 2.8em;
+}
+
+.featured-card-image {
+  width: 100%;
+}
+.featured-card-action {
+  position: absolute;
+  left: 16px;
+  bottom: 4em;
+  padding: 18px 36px;
+  will-change: transform;
+}
+
+.slide {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}

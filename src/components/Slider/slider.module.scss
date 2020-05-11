@@ -1,0 +1,55 @@
+@import '../../materials//style/stylesheet.scss';
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.slider-item--root {
+  width: 310px;
+  height: 400px;
+  min-width: 310px;
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--card-border-radius);
+  display: flex;
+  flex-direction: column;
+  margin: 0 1em;
+}
+
+.slider-item-image {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  object-position: center;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 86%);
+}
+
+.slider-item--root:nth-child(2n + 3) .slider-item-image,
+.slider-item--root:first-child .slider-item-image {
+  clip-path: polygon(0 0, 100% 0, 100% 86%, 0% 100%);
+}
+
+.slider-item-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #faead5;
+  z-index: -1;
+}
+
+.meta {
+  margin: 0 22px;
+}
+.action-btn {
+  margin-top: 24px;
+  font-size: 14px;
+  text-decoration: underline;
+  text-align: right;
+}

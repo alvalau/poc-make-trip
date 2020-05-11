@@ -1,0 +1,7 @@
+@import '../../materials//style/stylesheet.scss';
+
+.image {
+  border-radius: var(--card-border-radius);
+  object-fit: cover;
+  object-position: center;
+}
