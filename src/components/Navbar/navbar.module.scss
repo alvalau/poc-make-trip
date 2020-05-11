@@ -1,0 +1,43 @@
+.navbar {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+}
+.logo {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.navbar-menu {
+  flex-grow: 2;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 2em;
+  .navbar-menu-item,
+  .navbar-menu-item__active {
+    font-size: 0.825em;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline;
+    border: 2px solid transparent;
+  }
+  .navbar-menu-item__active {
+    padding: 4px 0;
+    border-bottom-color: pink;
+  }
+}
+.navbar-action {
+  flex: 1;
+}
+.login-button {
+  padding-left: 28px;
+  padding-right: 28px;
+}
